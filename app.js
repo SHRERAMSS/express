@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json()); // used to paarse the data
 
-mongoose.connect("mongodb://localhost:27017/expenses").then(() => {
+mongoose.connect("mongodb+srv://shreram:0107@expense-tracker.rwamt.mongodb.net/?retryWrites=true&w=majority&appName=expense-trackerv").then(() => {
   console.log("connected to database");
 });
 const expenseSchema = new mongoose.Schema({
